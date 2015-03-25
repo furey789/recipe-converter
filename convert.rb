@@ -9,6 +9,7 @@ class RecipeConverter
     @ingredients.each do |ingredient|
       ingredient.each_key {|key| ingredient[key]=ingredient[key]/15.0}
     end
+    puts "Ingredient units now listed in tablespoons"
     return @ingredients
   end
 
@@ -16,6 +17,7 @@ class RecipeConverter
     @ingredients.each do |ingredient|
       ingredient.each_key {|key| ingredient[key]=ingredient[key]/(15.0*16.0)}
     end
+    puts "Ingredient units now listed in cups"
     return @ingredients
   end
 
